@@ -50,6 +50,8 @@
         "no-alert":"off",
         "react/jsx-no-constructed-context-values": "off",
         "no-use-before-define": "off",
-        "react/no-array-index-key": "off"
+        "react/no-array-index-key": "off",
+        "react/no-danger": "off",
+        "radix": "off"
     }
 }
