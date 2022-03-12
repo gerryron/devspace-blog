@@ -14,7 +14,7 @@ export default function PostPage({
     cover_image: coverImage,
     author,
     author_image: authorImage,
-  }, content, slug,
+  }, content,
 }) {
   return (
     <Layout title={title}>
@@ -66,7 +66,6 @@ export async function getStaticProps({ params: { slug } }) {
     props: {
       frontmatter,
       content,
-      slug,
     },
   };
 }
