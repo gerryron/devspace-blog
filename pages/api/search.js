@@ -2,11 +2,13 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
+const cacheData = require('../../cache/data');
+
 export default (req, res) => {
   let posts;
 
   if (process.env.NODE_ENV === 'production') {
-    // TODO: fetch from cache
+    posts = cacheData.posts;
   } else {
     const files = fs.readdirSync(path.join('posts'));
     posts = files.map((filename) => {
